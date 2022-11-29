@@ -1,9 +1,15 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { LoginPage } from "./components/LoginPage";
+import { Main } from "./components/Main";
 function App() {
   return (
-    <div className="text-orange-500">
-      Hey this is lucky draw react app
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/main" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
